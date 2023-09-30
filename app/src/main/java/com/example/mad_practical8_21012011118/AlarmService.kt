@@ -13,8 +13,8 @@ class AlarmService : Service() {
     }
 
     override fun onDestroy() {
-        player.stop()
         super.onDestroy()
+        player.stop()
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
