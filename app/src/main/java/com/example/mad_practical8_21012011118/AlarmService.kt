@@ -12,11 +12,6 @@ class AlarmService : Service() {
         TODO("Return the communication channel to the service.")
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        player.stop()
-    }
-
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         if(intent!=null)
         {
@@ -24,5 +19,10 @@ class AlarmService : Service() {
             player.start()
         }
         return START_STICKY
+    }
+
+    override fun onDestroy() {
+        player.stop()
+        super.onDestroy()
     }
 }

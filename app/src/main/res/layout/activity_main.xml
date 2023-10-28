@@ -64,11 +64,11 @@
                 android:textSize="16sp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"/>
-            <TextView
+            <TextClock
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv4"
-                android:text="11:45:17 PM Aug, 14 2023"
+                android:format12Hour="hh:mm:ss a MMM dd yyyy"
                 app:layout_constraintTop_toBottomOf="@id/tv3"
                 app:layout_constraintStart_toStartOf="@id/constraint"
                 app:layout_constraintEnd_toEndOf="@id/constraint"
